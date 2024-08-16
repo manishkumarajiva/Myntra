@@ -32,14 +32,14 @@ app.use('/',routes);
 
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
-app.post('/voice', (request, response) => {
-  const twiml = new VoiceResponse();
-  twiml.say('To get to your extraction point, get on your bike and go down ' +
-  'the street. Then Left down an alley. Avoid the police cars. Turn left ' +
-  'into an unfinished housing development. Fly over the roadblock. Go ' +
-  'passed the moon.');
-  response.type('text/xml');
-  response.send(twiml.toString());
-});
+// app.post('/voice', (request, response) => {
+//   const twiml = new VoiceResponse();
+//   twiml.say('To get to your extraction point, get on your bike and go down ' +
+//   'the street. Then Left down an alley. Avoid the police cars. Turn left ' +
+//   'into an unfinished housing development. Fly over the roadblock. Go ' +
+//   'passed the moon.');
+//   response.type('text/xml');
+//   response.send(twiml.toString());
+// });
 
 module.exports = app;
